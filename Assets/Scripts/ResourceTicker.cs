@@ -60,7 +60,7 @@ public class ResourceTicker : MonoBehaviour
 
     /// <summary>
     /// 현재 questionRate에 따라 이번 틱에 생성할 ? 수량을 계산해 추가합니다.
-    /// questionRate = 개/초 단위. 기본 1/3 ≈ 0.333개/초 → 1틱(1초)에 0.333개 누적.
+    /// questionRate = 개/초 단위. 기본 1/5 ≈ 0.2개/초 → 1틱(1초)에 0.2개 누적.
     /// </summary>
     /// <returns>이번 틱에 실제로 생성된 ? 수량 (소수 포함)</returns>
     private float ProduceQuestions()
@@ -151,8 +151,8 @@ public class ResourceTicker : MonoBehaviour
     /// <returns>???로 전환되었으면 true</returns>
     public bool TryConvertToInsight(bool isOfflineBonus)
     {
-        // 기본 확률: 5~10% 범위에서 균등 랜덤
-        float baseChance = Random.Range(0.05f, 0.10f);
+        // 기본 확률: 3~8% 범위에서 균등 랜덤
+        float baseChance = Random.Range(0.03f, 0.08f);
         float totalChance = baseChance + _gm.InsightBonusChance;
         totalChance = Mathf.Clamp01(totalChance);
 

@@ -24,7 +24,7 @@ public class OfflineIncubator : MonoBehaviour
     // ── 상수 ──────────────────────────────────────────────────
     private const string LastQuitKey   = "OfflineIncubator_LastQuitTime";
 
-    private const float OfflineEfficiency = 0.65f;    // GDD: 온라인의 65%
+    private const float OfflineEfficiency = 0.5f;    // GDD: 온라인의 50%
     private const float MaxOfflineHours   = 8f;       // GDD: 소프트 캡 8시간
     private const float MaxOfflineSec     = MaxOfflineHours * 3600f;
 
@@ -32,7 +32,7 @@ public class OfflineIncubator : MonoBehaviour
     // 구조: (최소 오프라인 초, 추가 확률)
     private static readonly (float seconds, float bonus)[] InsightBonusTiers =
     {
-        (8f   * 3600f, 0.10f),  // 8h 이상  → +10%
+        (8f   * 3600f, 0.08f),  // 8h 이상  → +8%
         (4f   * 3600f, 0.05f),  // 4h 이상  → +5%
         (1f   * 3600f, 0.02f),  // 1h 이상  → +2%
     };

@@ -55,8 +55,8 @@ public class GameManager : MonoBehaviour
 
     // ── ? 생산 파라미터 ───────────────────────────────────────
     [Header("? 생산 파라미터 (GDD 6.1)")]
-    [Tooltip("초당 ? 생성 수. 기본 1/3 ≈ 0.333개/초 (= 1개/3초)")]
-    [SerializeField] private float _questionRate = 1f / 3f;
+    [Tooltip("초당 ? 생성 수. 기본 1/5 ≈ 0.2개/초 (= 1개/5초)")]
+    [SerializeField] private float _questionRate = 1f / 5f;
 
     public float QuestionRate
     {
